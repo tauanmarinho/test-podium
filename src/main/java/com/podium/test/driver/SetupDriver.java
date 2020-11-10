@@ -1,5 +1,6 @@
 package com.podium.test.driver;
 
+import lombok.Data;
 import lombok.Getter;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 @Getter
 public class SetupDriver {
 
-    private WebDriver driver;
+    public WebDriver driver;
     private String browser;
     private String os;
     private String node;

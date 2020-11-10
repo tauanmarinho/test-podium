@@ -7,12 +7,17 @@ public abstract class UiBaseTest {
 
     private static WebDriver webDriver;
     private static final String BROWSER = System.getProperty("browser");
+    private static SetupDriver setupDriver;
 
     static {
-        loadWebDriver();
+        setWebDriver();
+    }
+
+    private static void setWebDriver() {
+        setupDriver = new SetupDriver(BROWSER, "Linux", "", "");
     }
 
     private static void loadWebDriver() {
-        SetupDriver setupDriver = new SetupDriver(BROWSER, "Linux", "", "");
+        webDriver = setupDriver.getDriver();
     }
 }
