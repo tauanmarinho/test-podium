@@ -1,6 +1,5 @@
 package com.podium.test.driver;
 
-import lombok.Data;
 import lombok.Getter;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
@@ -19,13 +18,11 @@ public class SetupDriver {
     private String browser;
     private String os;
     private String node;
-    private String baseUrl;
 
-    public SetupDriver(String browser, String os, String node, String baseUrl) {
+    public SetupDriver(String browser, String os, String node) {
         this.browser = browser;
         this.os = os;
         this.node = node;
-        this.baseUrl = baseUrl;
 
         Platform platform = Platform.fromString(os.toLowerCase());
         if(browser.equalsIgnoreCase("chrome")) {
@@ -40,13 +37,12 @@ public class SetupDriver {
             }
         }
 
-        driverProperties(baseUrl);
+        driverProperties();
     }
 
-    private void driverProperties(String baseUrl) {
+    private void driverProperties() {
         this.driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         this.driver.manage().window().maximize();
-        this.driver.get(baseUrl);
     }
 
     private void capabilitiesFirefox(String node, Platform platform) {
@@ -62,6 +58,8 @@ public class SetupDriver {
     private void capabilitiesChrome(String node, Platform platform) {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setCapability("platform", platform);
+        chromeOptions.addArguments("--no-sandbox");
+        chromeOptions.addArguments("--disable-dev-shm-usage");
         try {
             this.driver = new RemoteWebDriver(new URL(node + "/wd/hub"), chromeOptions);
         } catch (MalformedURLException e) {
