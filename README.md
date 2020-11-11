@@ -44,13 +44,15 @@
         - MacOs/Linux: ifconfig
         - Windows: ipconfig
     
-    Inside of the project folder, by command line, run the following command replacing <your_local_ip_address> by you local ip machine address:
+    Inside of the project folder, by command line, run the following command replacing <your_local_ip_address> by you local ip machine address and replace <browser by chrome or firefox>:
 
     ```bash
-    mvn clean test -Dbrowser=chrome -DlocalIpAddress=<your_local_ip_address> -Ppodium
+    mvn clean test -Dbrowser=<browser> -DlocalIpAddress=<your_local_ip_address> -Ppodium
     ```
    
 - Run in a docker container:
+
+    On the Dockerfile, replace <your_local_ip_address> by you local ip machine address and replace <browser by chrome or firefox>, and then run the following command:
 
     ```bash
     docker build -t test-podium . && docker run test-podium
