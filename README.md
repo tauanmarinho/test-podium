@@ -1,12 +1,12 @@
 # test-podium
 
-- Description
+## Description
 
 Framework in Java for testing the main elements at https://www.podium.com web page.
 
 For this approach, some concepts and open-source testing framework were used to complete.
 
-- Frameworks used:
+- Stack tech used:
 
     - [Zelenium](https://github.com/zalando/zalenium): A flexible and scalable container based Selenium Grid. Where it's possible to make video recording, live preview and a great dashboard;
     - [TestNG](https://testng.org/doc/TestNG): Very well-known and used java framework for testing. Making your testing code more powerful and easier to use;
@@ -18,21 +18,21 @@ For this approach, some concepts and open-source testing framework were used to 
 
 - Locally:
 
-    - Java 8+ SDK installed in your local machine
+    - Java 8+ SDK installed
     - Maven installed
     - Docker installed
 
-Inside of the project folder, by command line:
+    Inside of the project folder, by command line:
 
-```bash
-mvn clean test -Dbrowser=chrome -DlocalIpAddress=<your_local_ip_address> -Ppodium
-```
+    ```bash
+    mvn clean test -Dbrowser=chrome -DlocalIpAddress=<your_local_ip_address> -Ppodium
+    ```
 
 - Run in a docker container
 
-```bash
-docker build -t test-podium . && docker run test-podium
-```
+    ```bash
+    docker build -t test-podium . && docker run test-podium
+    ```
 
 ## Dependencies
 - seleniumhq: 3.9.1
