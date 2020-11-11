@@ -5,7 +5,6 @@ import com.podium.test.components.Login;
 import com.podium.test.components.Podium;
 import com.podium.test.data.DataDriven;
 import com.podium.test.data.DataDrivenProvider;
-import com.podium.test.driver.SetupDriver;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 

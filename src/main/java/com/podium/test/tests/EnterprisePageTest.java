@@ -3,7 +3,6 @@ package com.podium.test.tests;
 import com.podium.test.UiBaseTest;
 import com.podium.test.components.EnterprisePage;
 import com.podium.test.components.Podium;
-import com.podium.test.driver.SetupDriver;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
