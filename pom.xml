@@ -15,6 +15,7 @@
         <compiler.version>8</compiler.version>
         <maven.compiler.plugin.version>3.6.1</maven.compiler.plugin.version>
         <browserName></browserName>
+        <localIpAddress></localIpAddress>
     </properties>
 
     <dependencies>
@@ -92,6 +93,7 @@
                             </suiteXmlFiles>
                             <systemPropertyVariables>
                                 <browserName>${browser}</browserName>
+                                <localIpAddress>${localIpAddress}</localIpAddress>
                             </systemPropertyVariables>
                         </configuration>
                     </plugin>

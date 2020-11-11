@@ -17,8 +17,6 @@ public class LoginPageTest extends UiBaseTest {
 
     @BeforeClass
     private void navigateLogin() {
-        System.out.println("Test Case One with Thread Id:- "
-                + Thread.currentThread().getId());
         this.webDriver = loadWebDriver();
         podiumLoginPage = new Podium(webDriver).navigateTo(BASE_URL).clickLogin();
     }
