@@ -34,23 +34,24 @@
         ```bash
         docker run --rm -ti --name zalenium -p 4444:4444 -e PULL_SELENIUM_IMAGE=true -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/videos:/home/seluser/videos --privileged dosel/zalenium start
         ```
+    - Find your local ip by:
+            - MacOs/Linux: ifconfig
+            - Windows: ipconfig
 
 - Run locally:
 
     - Java 8+ SDK installed
     - Maven installed
     
-    - Find your local ip by:
-        - MacOs/Linux: ifconfig
-        - Windows: ipconfig
-    
-    Inside of the project folder, by command line, run the following command replacing <your_local_ip_address> by you local ip machine address:
+    Inside of the project folder, by command line, run the following command replacing <your_local_ip_address> by you local ip machine address and replace <browser> by chrome or firefox>:
 
     ```bash
-    mvn clean test -Dbrowser=chrome -DlocalIpAddress=<your_local_ip_address> -Ppodium
+    mvn clean test -Dbrowser=<browser> -DlocalIpAddress=<your_local_ip_address> -Ppodium
     ```
    
 - Run in a docker container:
+
+    On the Dockerfile, replace <your_local_ip_address> by you local ip machine address and replace <browser> by chrome or firefox>, and then run the following command:
 
     ```bash
     docker build -t test-podium . && docker run test-podium
@@ -61,11 +62,13 @@
     - [Grid Console URL](http://localhost:4444/grid/console)
     - [Zalenium Live Preview](http://localhost:4444/grid/admin/live?only_active_sessions=true&refresh=60)
     - [Zalenium Dashboard](http://localhost:4444/dashboard/)
+    - [Report - Locally](http://localhost:63342/test-podium/target/surefire-reports/html/index.html)
 
 ## Dependencies
 - seleniumhq: 3.9.1
 - testng: 7.1.0
 - lombok: 1.18.12
+- reportng: 1.2.2
 
 ## Final considerations
 I really enjoyed creating this structure. I was able to put into practice a lot of test knowledge learned during those years in a product launched in a real environment. Of course, this project does not fully apply to UI test quality assurance. It is highly recommended applying tests directly on the back-end, checking status code and the entire body returned by the API, with a great speed and greater variation of use cases, complementing the test cases using Selenium.
