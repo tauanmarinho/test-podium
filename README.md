@@ -56,6 +56,12 @@
     docker build -t test-podium . && docker run test-podium
     ```
 
+- Results, dashboard and Live Preview:
+
+    - [Grid Console URL](http://localhost:4444/grid/console)
+    - [Zalenium Live Preview](http://localhost:4444/grid/admin/live?only_active_sessions=true&refresh=60)
+    - [Zalenium Dashboard](http://localhost:4444/dashboard/)
+
 ## Dependencies
 - seleniumhq: 3.9.1
 - testng: 7.1.0
