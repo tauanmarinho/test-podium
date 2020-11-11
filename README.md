@@ -6,6 +6,14 @@
 
 - For this approach, some concepts and open-source testing framework were used to complete.
 
+- Framework created:
+    - Validation the main buttons and fields on Login and Enterprise pages
+    - Total of methods test: 5 
+        - E-mail or mobile field validation test: 4 variations
+        - Credential validation test: 2 variations
+        - Total of tests: 9
+    - Expected result: 100% pass - 0% fail
+
 - Stack tech used:
 
     - [Zelenium](https://github.com/zalando/zalenium): A flexible and scalable container based Selenium Grid. Where it's possible to make video recording, live preview and a great dashboard;
