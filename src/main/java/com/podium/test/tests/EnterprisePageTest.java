@@ -17,8 +17,6 @@ public class EnterprisePageTest extends UiBaseTest {
 
     @BeforeClass
     private void navigateEnterprise() {
-        System.out.println("Test Case One with Thread Id:- "
-                + Thread.currentThread().getId());
         this.webDriver = loadWebDriver();
         enterprisePage = new Podium(webDriver)
             .navigateTo(BASE_URL)

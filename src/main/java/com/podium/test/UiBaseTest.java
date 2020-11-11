@@ -10,7 +10,7 @@ public abstract class UiBaseTest {
     protected static final String BASE_URL = "https://www.podium.com";
 
     public WebDriver loadWebDriver() {
-        SetupDriver setupDriver = new SetupDriver(BROWSER, "Linux", "http://0.0.0.0:4444");
+        SetupDriver setupDriver = new SetupDriver(BROWSER, "Linux", "http://192.168.15.8:4444");
         return setupDriver.getDriver();
     }
 
