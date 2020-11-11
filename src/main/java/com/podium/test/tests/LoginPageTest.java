@@ -5,18 +5,16 @@ import com.podium.test.components.Login;
 import com.podium.test.components.Podium;
 import com.podium.test.data.DataDriven;
 import com.podium.test.data.DataDrivenProvider;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
 public class LoginPageTest extends UiBaseTest {
 
     private Login podiumLoginPage;
-    private static WebDriver webDriver;
     protected Podium podium;
 
     @BeforeClass
     private void navigateLogin() {
-        this.webDriver = loadWebDriver();
+        webDriver = loadWebDriver();
         podiumLoginPage = new Podium(webDriver).navigateTo(BASE_URL).clickLogin();
     }
 
