@@ -43,18 +43,18 @@
     - Java 8+ SDK installed
     - Maven installed
     
-    Inside of the project folder, by command line, run the following command replacing <your_local_ip_address> by you local ip machine address and <browser> by chrome or firefox:
+    Inside of the project folder, by command line, run the following command replacing <your_local_ip_address> by you local ip machine address and <browser_type> by chrome or firefox:
 
     ```bash
-    mvn clean test -Dbrowser=<browser> -DlocalIpAddress=<your_local_ip_address> -Ppodium
+    mvn clean test -Dbrowser=<browser_type> -DlocalIpAddress=<your_local_ip_address> -Ppodium
     ```
    
 - Run in a docker container:
 
-    On the Dockerfile, replace <your_local_ip_address> by you local ip machine address and <browser> by chrome or firefox:
+    On the Dockerfile, replace <your_local_ip_address> by you local ip machine address and <browser_type> by chrome or firefox:
      
     ```batch
-    RUN ["mvn", "clean", "test", "-Dbrowser=<browser>", "-DlocalIpAddress=<your_local_ip_address>", "-Ppodium"]
+    RUN ["mvn", "clean", "test", "-Dbrowser=<browser_type>", "-DlocalIpAddress=<your_local_ip_address>", "-Ppodium"]
     ```   
   
     And then run the following command:
