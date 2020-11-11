@@ -49,7 +49,6 @@ public class Login extends BaseWebComponent {
     @FindBy(id = "emailOrPhoneInput")
     private WebElement emailOrPhoneInput;
 
-
     protected Login(WebDriver webDriver) {
         super(webDriver);
     }
@@ -126,5 +125,4 @@ public class Login extends BaseWebComponent {
         click(nextSignInButton);
         return this;
     }
-
 }

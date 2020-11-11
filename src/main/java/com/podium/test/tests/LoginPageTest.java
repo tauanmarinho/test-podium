@@ -12,8 +12,7 @@ public class LoginPageTest extends UiBaseTest {
     private Login podiumLoginPage;
 
     @BeforeClass
-    private void loadWebDriver() {
-        this.webDriver = setupDriver.getDriver();
+    private void navigateLogin() {
         podiumLoginPage = new Podium(webDriver).navigateTo(BASE_URL).clickLogin();
     }
 
@@ -68,10 +67,5 @@ public class LoginPageTest extends UiBaseTest {
             .signInButtonVisible()
             .forgotPasswordVisible()
             .passwordRequiredVisible();
-    }
-
-    @AfterClass
-    private void quitWebDriver() {
-        this.webDriver.quit();
     }
 }
