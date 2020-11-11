@@ -13,20 +13,35 @@ For this approach, some concepts and open-source testing framework were used to 
     - [Circleci](https://circleci.com): An incredible CI/CD tool, automating the process of build on GitHub, checking the build status of a PR merge;
     - [Docker](https://www.docker.com): Container deployment tool, packaging software into standardized units for deployment or in this case of project testing
     - [Selenium WebDriver](https://www.selenium.dev): Framework for automate browsers in a simple way.
+    - [Maven](https://maven.apache.org): Software project management tool.
     
 ## Usage
+
+- Before running:
+    
+    - Docker installed
+    - Run the Zelenium Grid Frame on port 4444:
+        ```bash
+        docker run --rm -ti --name zalenium -p 4444:4444 -e PULL_SELENIUM_IMAGE=true -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/videos:/home/seluser/videos --privileged dosel/zalenium start
+        ```
+        
+    
 
 - Locally:
 
     - Java 8+ SDK installed
     - Maven installed
-    - Docker installed
-
-    Inside of the project folder, by command line:
+    
+    Find your local ip by:
+        - MacOs/Linux: ifconfig
+        - Windows: ipconfig
+    
+    Inside of the project folder, by command line, run the following command replacing <your_local_ip_address> by you local ip machine address:
 
     ```bash
     mvn clean test -Dbrowser=chrome -DlocalIpAddress=<your_local_ip_address> -Ppodium
     ```
+   
 
 - Run in a docker container
 
