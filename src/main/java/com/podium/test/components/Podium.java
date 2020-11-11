@@ -8,8 +8,8 @@ public class Podium extends BaseWebComponent {
         super(webDriver);
     }
 
-    public PodiumMainPage navigateTo(String url) {
+    public PodiumHomePage navigateTo(String url) {
         webDriver.get(url);
-        return new PodiumMainPage(webDriver);
+        return new PodiumHomePage(webDriver);
     }
 }

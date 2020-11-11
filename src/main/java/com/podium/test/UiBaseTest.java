@@ -8,6 +8,7 @@ public abstract class UiBaseTest {
 
     protected WebDriver webDriver;
     private static final String BROWSER = System.getProperty("browser");
+    public static final String BASE_URL = "https://www.podium.com";
     protected static SetupDriver setupDriver;
     protected Podium podium;
 
