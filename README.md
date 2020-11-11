@@ -2,9 +2,17 @@
 
 ## Description
 
-Framework in Java for testing the main elements at https://www.podium.com web page.
+- Test Framework in Java/Maven that runs a suite of selenium tests, target https://www.podium.com web page, that ensure the site is functioning normally.
 
-For this approach, some concepts and open-source testing framework were used to complete.
+- For this approach, some concepts and open-source testing framework were used to complete.
+
+- Framework created:
+    - Validation the main buttons and fields on Login and Enterprise pages
+    - Total of methods test: 5 
+        - E-mail or mobile field validation test: 4 variations
+        - Credential validation test: 2 variations
+        - Total of tests: 9
+    - Expected result: 100% pass - 0% fail
 
 - Stack tech used:
 
@@ -52,6 +60,9 @@ For this approach, some concepts and open-source testing framework were used to 
 - seleniumhq: 3.9.1
 - testng: 7.1.0
 - lombok: 1.18.12
+
+## Final considerations
+Really enjoyed creating this framework. I could put into practice much testing knowledge learn during these years in a real environment released product.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
