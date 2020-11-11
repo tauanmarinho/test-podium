@@ -34,17 +34,16 @@
         ```bash
         docker run --rm -ti --name zalenium -p 4444:4444 -e PULL_SELENIUM_IMAGE=true -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/videos:/home/seluser/videos --privileged dosel/zalenium start
         ```
+    - Find your local ip by:
+            - MacOs/Linux: ifconfig
+            - Windows: ipconfig
 
 - Run locally:
 
     - Java 8+ SDK installed
     - Maven installed
     
-    - Find your local ip by:
-        - MacOs/Linux: ifconfig
-        - Windows: ipconfig
-    
-    Inside of the project folder, by command line, run the following command replacing <your_local_ip_address> by you local ip machine address and replace <browser by chrome or firefox>:
+    Inside of the project folder, by command line, run the following command replacing <your_local_ip_address> by you local ip machine address and replace <browser> by chrome or firefox>:
 
     ```bash
     mvn clean test -Dbrowser=<browser> -DlocalIpAddress=<your_local_ip_address> -Ppodium
@@ -52,7 +51,7 @@
    
 - Run in a docker container:
 
-    On the Dockerfile, replace <your_local_ip_address> by you local ip machine address and replace <browser by chrome or firefox>, and then run the following command:
+    On the Dockerfile, replace <your_local_ip_address> by you local ip machine address and replace <browser> by chrome or firefox>, and then run the following command:
 
     ```bash
     docker build -t test-podium . && docker run test-podium
