@@ -40,7 +40,7 @@
     - Java 8+ SDK installed
     - Maven installed
     
-    Find your local ip by:
+    - Find your local ip by:
         - MacOs/Linux: ifconfig
         - Windows: ipconfig
     
@@ -62,7 +62,7 @@
 - lombok: 1.18.12
 
 ## Final considerations
-Really enjoyed creating this framework. I could put into practice much testing knowledge learn during these years in a real environment released product.
+I really enjoyed creating this structure. I was able to put into practice a lot of test knowledge learned during those years in a product launched in a real environment. Of course, this project does not fully apply to UI test quality assurance. It is highly recommended applying tests directly on the back-end, checking status code and the entire body returned by the API, with a great speed and greater variation of use cases, complementing the test cases using Selenium.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
